@@ -96,6 +96,16 @@ function displayStatus(data) {
 
 function displayException(data) {
 
+    let heading = "An Exception Occured";
+
+    results = '<div>The API returned status code ${data.status_code}</div>';
+    results += '<div>Error Number ${data.error_no}</div>';
+    results += '<div>Error Text: ${data.error}</div>';
+
+    document.getElementById("resultsModalTitle").innerText = heading;
+    document.getElementById("results-content").innerHTML = results;
+
+    resultsModal.show();
 }
 
 
